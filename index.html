@@ -4,8 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- babel link -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- styling -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="root"></div>
+    <script type="text/babel">
+        const headerElement = React.createElement(
+            'div',
+            null,
+            React.createElement(
+                'h1',
+                null,
+                'Topics Covered'
+            )
+        );
+        const firstDiv = React.createElement(
+            'div',
+            null,
+            React.createElement(
+                'p',
+                null,
+                'The following is a list of all the topics we cover in the MDN learning area.'
+            )
+        )
+        const secondDiv = React.createElement(
+            'div',
+            null,
+            React.createElement(
+                'dl',
+                null,
+                React.createElement(
+                    'dt',
+                    null,
+                    React.createElement(
+                        'a',
+                        {href: '#'},
+                        'Getting strated with the web'
+                    )
+                ),
+                React.createElement(
+                        'dd',
+                        null,
+                        'Provides a practical introduction to web development for complete beginners.'
+                )
+            )
+        )
+        const thirdDiv = React.createElement(
+            'div',
+            null,
+            React.createElement(
+                'dl',
+                null,
+                React.createElement(
+                    'dt',
+                    null,
+                    React.createElement(
+                        'a',
+                        {href: '#'},
+                        'HTML--Structuring the web'
+                    )
+                ),
+                 React.createElement(
+                        'dd',
+                        null,
+                        'HTML is the language that we se to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.'
+                 )
+            )
+            
+        )
+        const fourthDiv = React.createElement(
+            'div',
+            null,
+            React.createElement(
+                'dl',
+                null,
+                React.createElement(
+                    'dt',
+                    null,
+                    React.createElement(
+                        'a',
+                        {href: '#'},
+                        'CSS -- Styling the web'
+                    )
+                ),
+                React.createElement(
+                    'dd',
+                    null,
+                    "CSS is the language that we use to control our web content's style and layout, as well as adding behaviour like animation. This topic provides comprehensive coverage of CSS."
+                )
+            )
+        )
+        const mainDiv = React.createElement(
+            'div',
+            {className: 'main'},
+            headerElement,
+            firstDiv,
+            secondDiv,
+            thirdDiv,
+            fourthDiv
+        )
+
+        ReactDOM.render(mainDiv, document.getElementById('root'));
+    </script>
 </body>
 </html>
